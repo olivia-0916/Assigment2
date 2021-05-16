@@ -11,7 +11,7 @@ class Detailpage: UIViewController {
 
     @IBOutlet weak var photoimage: UIImageView!
     @IBOutlet weak var namelabel: UILabel!
-    @IBOutlet weak var countrylabel: UILabel!
+    @IBOutlet weak var shortname: UILabel!
     @IBOutlet weak var locationlabel: UILabel!
     @IBOutlet weak var itatlabel: UILabel!
     
@@ -21,9 +21,9 @@ class Detailpage: UIViewController {
         super.viewDidLoad()
         photoimage.image = UIImage(named: (airport?.imageName)!)
         namelabel.text = airport?.name
-        countrylabel.text = airport?.country
         locationlabel.text = airport?.servedCity
         itatlabel.text = airport?.IATA
+        shortname.text = airport?.shortName
         navigationItem.title = airport?.IATA
     }
     
